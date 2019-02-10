@@ -1,54 +1,109 @@
 <!DOCTYPE html>
+
 <head>
-	<meta charset="utf-8">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Include Bootstrap 4 Dependencies -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-	<script src="assets/js/payloads.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/jquery-3.2.1.slim.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/main.js"></script>	
-	
-
-	<title> O.MG Console </title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Include Bootstrap 4 Dependencies -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/payloads.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <title> O.MG Console </title>
 </head>
-<body class="bg-dark text-white">
-	<nav class="navbar navbar-expand-lg navbar-dark nav-custom">
-  <a class="navbar-brand" href="#">O.MG</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark nav-custom text-white">
+        <a class="navbar-brand" href="#">O.MG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Payloads
         </a>
-        <div class="dropdown-menu" id="payload-items" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" id="payload-items" aria-labelledby="navbarDropdown">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#wifi-settings-modal">Wifi Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#wifi-settings-modal">Advanced</a>
+                </li>
+            </ul>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Wifi Settings</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-	<br>
-	<div class="container" id="control-panel">
-		<h2> Payload </h2>
-		<div class="input-group">
-  			<textarea class="form-control" id="script-area" aria-label="With textarea" placeholder="1337 Remote Code"></textarea>
-		</div>
-
-		<br>
-		<button type="button" id="launch-payload" class="btn btn-primary btn-lg btn-block">Run Payload</button>
-	</div>
-
-
+    </nav>
+    <br>
+    <div class="container" id="control-panel">
+        <h2> Payload </h2>
+        <div class="input-group">
+            <textarea class="form-control" id="script-area" aria-label="With textarea" placeholder="1337 Remote Code"></textarea>
+        </div>
+        <br>
+        <button type="button" id="launch-payload" class="btn btn-primary btn-lg btn-block">Run Payload</button>
+    </div>
+    <div class="modal fade" id="wifi-settings-modal" tabindex="-1" role="dialog" aria-labelledby="wifiSettingsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Wifi Settings</h5>
+                    <button type="button" class="close light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="checkbox" checked>
+                        <label>Do something</label>
+                        <br>
+                        <input type="checkbox" class="switch" id="switch-id">
+                        <label for="switch-id">Do something else</label>
+                        <br>
+                        <input type="checkbox" class="switch" id="switch-id">
+                        <label for="switch-id">Weeee</label>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="advanced-settings-modal" tabindex="-1" role="dialog" aria-labelledby="advancedSettingsModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Advanced Settings</h5>
+                    <button type="button" class="close light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="checkbox" checked>
+                        <label>Do something</label>
+                        <br>
+                        <input type="checkbox" class="switch" id="switch-id">
+                        <label for="switch-id">Do something else</label>
+                        <br>
+                        <input type="checkbox" class="switch" id="switch-id">
+                        <label for="switch-id">Weeee</label>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
