@@ -4,6 +4,7 @@
 	    <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Include Bootstrap 4 Dependencies -->
+	<script src="assets/js/payloads.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/jquery-3.2.1.slim.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -15,30 +16,36 @@
 	<title> O.MG Console </title>
 </head>
 <body>
-	<div id="title">
-		<h1>O.MG</h1>
-		<small> A Wifi BadUSB </small>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand navbar-invert" href="#">O.MG</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Payloads
+        </a>
+        <div class="dropdown-menu" id="payload-items" aria-labelledby="navbarDropdown">
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Wifi Settings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 	<br>
 	<div class="container" id="control-panel">
-		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  			<div class="btn-group" role="group">
-    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" 	aria-haspopup="true" aria-expanded="false">
-     				Payloads
-   				</button>
-   				<div class="dropdown-menu" id="payload-items" aria-labelledby="btnGroupDrop1">
-      				<a class="dropdown-item" id="script-button" script_id="macos/terminal/reverse_shell" href="#">MacOS Reverse Shell</a>
-    			</div>
-  			</div>
-		</div>
-		<br>
-		<br>
+		<h2> Payload </h2>
 		<div class="input-group">
   			<textarea class="form-control" id="script-area" aria-label="With textarea" placeholder="1337 Remote Code"></textarea>
 		</div>
 
 		<br>
-		<button type="button" id="launch-payload" class="btn btn-primary btn-lg btn-block">Let it rip</button>
+		<button type="button" id="launch-payload" class="btn btn-primary btn-lg btn-block">Run Payload</button>
 	</div>
 </body>
 </html>

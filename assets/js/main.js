@@ -1,25 +1,4 @@
 $(document).ready(function() {
-
-	// Put your payloads in here, and then they'll be automatically added to the item dropdown
-	// This could also call out to an api to populate
-	var payloads = [
-		{
-			"name":"MacOS Reverse Shell",
-			"id":"macos/terminal/reverse_shell",
-			"code":"Something something something"
-		},
-		{
-			"name":"Ubuntu Reverse Shell",
-			"id":"ubuntu/terminal/reverse_shell",
-			"code":"Something something something"
-		},
-		{
-			"name":"Windows Reverse Shell",
-			"id":"windows/powershell/reverse_shell",
-			"code":"Something something something Windows"
-		}
-	];
-
 	var tmp_storage = {};
 	var payloads_html = "";
 
