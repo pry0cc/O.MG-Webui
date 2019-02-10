@@ -24,6 +24,7 @@ $(document).ready(function() {
 	$('#launch-payload').click(function() {
 		// I don't know how it calls to the api, but this is where you would do it.
 		var payload = $("#script-area").val();
+		$("#launch-payload").html(`Running...`);
 		console.log(payload);
 	});
 });
